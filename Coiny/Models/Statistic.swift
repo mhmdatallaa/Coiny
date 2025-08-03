@@ -11,17 +11,17 @@ struct Statistic: Identifiable {
     let id = UUID().uuidString
     let title: String
     let value: String
-    let percentagechange: Double?
+    let percentageChange: Double?
     
-    init(title: String, value: String, percentagechange: Double? = nil) {
+    init(title: String, value: String, percentageChange: Double? = nil) {
         self.title = title
         self.value = value
-        self.percentagechange = percentagechange
+        self.percentageChange = percentageChange
     }
 }
 
 extension Statistic {
-    static let sambleStatistic1 = Statistic(title: "Market Cap", value: "$12.58n", percentagechange: 25.34)
+    static let sambleStatistic1 = Statistic(title: "Market Cap", value: "$12.58n", percentageChange: 25.34)
     static let sambleStatistic2 = Statistic(title: "Total Volume", value: "$1.23Tr")
-    static let sambleStatistic3 = Statistic(title: "Protfolio Value", value: "$3.341,23Tr", percentagechange: -12.3)
+    static let sambleStatistic3 = Statistic(title: "Protfolio Value", value: "$3.341,23Tr", percentageChange: -12.3)
 }
