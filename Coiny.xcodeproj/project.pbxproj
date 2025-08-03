@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D7BB7BF2E3F4FDB0040A1AB /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7BB7BE2E3F4FDB0040A1AB /* LocalFileManager.swift */; };
 		6DB471BB2E3E08AF002B10DF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB471BA2E3E08AF002B10DF /* NetworkManager.swift */; };
 		6DB472972E3E5514002B10DF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB472962E3E5514002B10DF /* Logger.swift */; };
 		6DB4729A2E3E6336002B10DF /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB472992E3E6336002B10DF /* CoinImageView.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		6D1163B82E3B693B001760F3 /* Coiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7BB7BE2E3F4FDB0040A1AB /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		6DB471BA2E3E08AF002B10DF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6DB472962E3E5514002B10DF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		6DB472992E3E6336002B10DF /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				6DB471BA2E3E08AF002B10DF /* NetworkManager.swift */,
 				6DB472962E3E5514002B10DF /* Logger.swift */,
+				6D7BB7BE2E3F4FDB0040A1AB /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				6DB4729E2E3E67A6002B10DF /* CoinImageViewModel.swift in Sources */,
 				6DF5D7B02E3DEF8B000B69B3 /* Double.swift in Sources */,
 				6DF5D7B12E3DEF8B000B69B3 /* PreviewProvider.swift in Sources */,
+				6D7BB7BF2E3F4FDB0040A1AB /* LocalFileManager.swift in Sources */,
 				6DF5D7B22E3DEF8B000B69B3 /* Coin.swift in Sources */,
 				6DB4729A2E3E6336002B10DF /* CoinImageView.swift in Sources */,
 				6DB472972E3E5514002B10DF /* Logger.swift in Sources */,
