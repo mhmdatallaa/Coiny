@@ -60,8 +60,8 @@ class HomeViewModel: ObservableObject {
         var stats: [Statistic] = []
         guard let data  else { return stats}
         
-        let marketCap = Statistic(title: "MarketCat", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
-        let volume = Statistic(title: "24h vloume", value: data.volume)
+        let marketCap = Statistic(title: "MarketCap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
+        let volume = Statistic(title: "24h Vloume", value: data.volume)
         let btcDominance = Statistic(title: "BTC Dominance", value: data.btcDominance)
         let protfolio = Statistic(title: "Portfolio", value: "$0.00", percentageChange: 0)
         

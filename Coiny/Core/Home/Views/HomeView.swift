@@ -10,13 +10,18 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var showProtfolio = false
+    @State private var showProtfolio = false  // Animate right
+    @State private var showProtfolioView = false // new sheet
     
     var body: some View {
         ZStack {
             // background layer
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showProtfolioView) {
+                    PortfolioView()
+                        .environmentObject(vm)
+                }
             
             // content layer
             VStack {
@@ -59,6 +64,11 @@ extension HomeView {
                 .background(
                     CircleButtonAnimationView(animate: $showProtfolio)
                     )
+                .onTapGesture {
+                    if showProtfolio {
+                        showProtfolioView.toggle()
+                    }
+                }
             Spacer()
             Text(showProtfolio ? "Protfolio" : "Live prices")
                 .font(.headline)
