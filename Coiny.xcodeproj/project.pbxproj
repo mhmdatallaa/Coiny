@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4C325B2E42A2E600083821 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C325A2E42A2E600083821 /* DetailView.swift */; };
 		6D7BB7BF2E3F4FDB0040A1AB /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7BB7BE2E3F4FDB0040A1AB /* LocalFileManager.swift */; };
 		6D7BB7C32E3F67510040A1AB /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7BB7C22E3F67510040A1AB /* SearchBarView.swift */; };
 		6D7BB7C52E3F6D740040A1AB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7BB7C42E3F6D740040A1AB /* UIApplication.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		6D1163B82E3B693B001760F3 /* Coiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4C325A2E42A2E600083821 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6D7BB7BE2E3F4FDB0040A1AB /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		6D7BB7C22E3F67510040A1AB /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		6D7BB7C42E3F6D740040A1AB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -100,6 +102,30 @@
 				6D1163B82E3B693B001760F3 /* Coiny.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6D4C32572E429FFC00083821 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6D4C32582E42A01900083821 /* ViewModels */,
+				6D4C32592E42A02900083821 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		6D4C32582E42A01900083821 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6D4C32592E42A02900083821 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D4C325A2E42A2E600083821 /* DetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6DB471B92E3E089D002B10DF /* Utilities */ = {
@@ -193,6 +219,7 @@
 			children = (
 				6DF5D7962E3DEF8B000B69B3 /* Components */,
 				6DF5D79C2E3DEF8B000B69B3 /* Home */,
+				6D4C32572E429FFC00083821 /* Detail */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -344,6 +371,7 @@
 				6DB472972E3E5514002B10DF /* Logger.swift in Sources */,
 				6DF5D7B32E3DEF8B000B69B3 /* CoinyApp.swift in Sources */,
 				6DB4729C2E3E6549002B10DF /* CoinImageService.swift in Sources */,
+				6D4C325B2E42A2E600083821 /* DetailView.swift in Sources */,
 				6D9646B72E4002BC009C73FB /* PortfolioView.swift in Sources */,
 				6DED2E682E40A74200A076CC /* PortfolioDataService.swift in Sources */,
 			);
