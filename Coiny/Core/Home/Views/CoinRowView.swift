@@ -31,6 +31,7 @@ struct CoinRowView: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
         CoinRowView(coin: Coin.sambleData, showHoldingCoulmn: true)
+        .padding()
 }
 
 extension CoinRowView {
