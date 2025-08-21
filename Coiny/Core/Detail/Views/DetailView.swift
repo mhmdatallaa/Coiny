@@ -23,6 +23,7 @@ struct DetailLoadingView: View {
 struct DetailView: View {
     
     @StateObject private var vm: DetailViewModel
+    @State private var showFullDescription: Bool = false
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -42,11 +43,12 @@ struct DetailView: View {
                 VStack(spacing: 20) {
                     overViewTitle
                     Divider()
+                    descriptionSection
                     overviewGird
-                    
                     additionTitle
                     Divider()
                     additionalGrid
+                    websiteSection
                 }
                 .padding()
             }
@@ -93,6 +95,32 @@ extension DetailView {
             .foregroundStyle(Color.theme.accent)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
+    
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescrtption = vm.coinDescrtption, !coinDescrtption.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescrtption)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundStyle(Color.theme.secondaryText)
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    } label: {
+                        Text(showFullDescription ? "Read less.. " : "Read more..")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 4)
+                    }
+                    .tint(.blue)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+    
     private var additionalGrid: some View {
         LazyVGrid(columns: columns,
                   alignment: .leading,
@@ -111,6 +139,23 @@ extension DetailView {
             CoinImageView(coin: vm.coin)
                 .frame(width: 25, height: 25)
         }
+    }
+    
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if let websiteURL = vm.websiteURL,
+               let url = URL(string: websiteURL) {
+                Link("Website", destination: url)
+            }
+            
+            if let redditURL = vm.redditURL,
+               let url = URL(string: redditURL) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .tint(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
     }
     
 }
