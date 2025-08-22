@@ -40,9 +40,15 @@ struct HomeView: View {
                 }
                 
                 if showProtfolio {
-                    protfoliocoinsList
-                        // cell animation move to right
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.protfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            protfoliocoinsList
+                        }
+                    }
+                    // cell animation move to right
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -130,6 +136,15 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+    }
+    
+    private var portfolioEmptyText: some View {
+        Text("You havn't added any coin to your portfolio yet. Click the + button to get started 🫤.")
+            .font(.callout)
+            .foregroundStyle(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
     
     // MARK: - columnsTitles

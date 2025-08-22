@@ -21,7 +21,7 @@ struct CoinyApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                NavigationView {
+                NavigationStack {
                     HomeView()
                 }
                 .environmentObject(vm)
@@ -36,3 +36,4 @@ struct CoinyApp: App {
         }
     }
 }
+
