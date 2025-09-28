@@ -10,7 +10,7 @@
 
 ## 📱 About
 
-**Coiny** is a modern, feature-rich iOS application that allows users to track cryptocurrency prices in real-time and manage their personal crypto portfolio. Built with SwiftUI and following MVVM architecture patterns, this app demonstrates advanced iOS development skills including API integration, data persistence, and sophisticated UI animations.
+**Coiny** is an iOS application that allows users to track cryptocurrency prices in real-time and manage their personal crypto portfolio. Built with SwiftUI and following MVVM architecture patterns, this app demonstrates advanced iOS development skills including API integration and data persistence.
 
 <img src="https://github.com/user-attachments/assets/64d03d17-46d8-444e-9348-e731e60aa380" width="250"/>
 
